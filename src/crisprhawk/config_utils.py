@@ -28,6 +28,7 @@ CONFIG = os.path.abspath(os.path.join(os.path.dirname(__file__), "config/config.
 
 # mamba/conda commands
 MAMBA = "mamba"
+MICROMAMBA = "micromamba"
 CONDA = "conda"
 
 # define crispr-hawk scoring models catalogue
@@ -110,6 +111,8 @@ def set_command() -> str:
     """
     if command_exists(MAMBA):
         return MAMBA
+    if command_exists(MICROMAMBA):
+        return MICROMAMBA
     return CONDA if command_exists(CONDA) else ""
 
 

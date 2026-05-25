@@ -176,7 +176,26 @@ mamba update crisprhawk
 
 ### 1.2 Install CRISPR-HAWK from Docker
 
-TBA
+CRISPR-HAWK is also available through Docker, providing an isolated environment with all required dependencies pre-installed, including a dedicated environment for CRISPRitz.
+
+You can build the Docker image directly from the provided `Dockerfile`:
+
+```bash
+docker build -t crisprhawk .
+```
+
+Once the built, the CRISPR-HAWK Docker image will be ready for use. To confirm the image is successfully installed, you can list all available Docker images by typing:
+```bash
+docker images
+```
+
+Look for an entry similar to the following:
+```text
+REPOSITORY          TAG       IMAGE ID       CREATED        SIZE
+pinellolab/crisprhawk latest    <image_id>     <timestamp>    <size>
+```
+
+You are now ready to run CRISPR-HAWK using Docker.
 
 ### 1.3 Install CRISPR-HAWK from PyPI
 
